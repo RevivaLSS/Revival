@@ -1,0 +1,94 @@
+#include<stdio.h>
+int stack[100],pilihan,n,top,x,i;
+int main()
+{
+ //clrscr();
+ top=-1;
+ puts("Nama \t: Revi Valen Sumendap");
+puts("Nim \t: 2008561099");
+puts("Kelas \t: E");
+puts("\n\tProgram STACK");
+ printf("\n\n Masukan Kapasitas Stack Max [100]: ");
+ scanf("%d",&n);
+ printf("\n\t Program Stack Menggunakan Array");
+ printf("\n\t--------------------------------");
+ printf("\n\t 1.PUSH\n\t 2.POP\n\t 3.VIEW\n\t 4.EXIT\n");
+ do
+ {
+ printf("\n Masukan Pilihan: ");
+ scanf("%d",&pilihan);
+11
+ switch(pilihan)
+ {
+ case 1:
+ {
+ push();
+ break;
+ }
+ case 2:
+ {
+ pop();
+ break;
+ }
+ case 3:
+ {
+ view();
+ break;
+ }
+ case 4:
+ {
+ printf("\n\t Anda Telah Keluar ");
+ break;
+ }
+ default:
+ {
+ printf ("\n\t Masukan Input Yang
+Valid(1/2/3/4)\n");
+ }
+ }
+ }
+ while(pilihan!=4);
+ return 0;
+12
+}
+void push()
+{
+ if(top>=n-1)
+ {
+ printf("\n\tSTACK Sudah Penuh");
+ }
+ else
+ {
+ printf(" Masukan Angka Yang Akan Di Push: ");
+ scanf("%d",&x);
+ top++;
+ stack[top]=x;
+ }
+}
+void pop()
+{
+ if(top<=-1)
+ {
+ printf("\n Tidak Bisa Pop Karena STACK Kosong\n");
+ }
+ else
+ {
+ printf("\n %d Berhasil Di Pop\n",stack[top]);
+ top--;
+ }
+}
+void view()
+{
+ if(top>=0)
+13
+ {
+ printf(" Isi Dari STACK \n");
+ for(i=top; i>=0; i--)
+ printf("\n%d",stack[i]);
+ printf("\n");
+ }
+ else
+ {
+ printf("\n STACK Kosong\n");
+ }
+}
