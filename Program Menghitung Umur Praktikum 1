@@ -1,0 +1,42 @@
+#include <stdio.h>
+int main()
+{
+char nama[50], kelas[10], alamat[50], bulan[12];
+int nim;
+int nohp;
+int umur;
+int tahun;
+int tanggal;
+printf("Masukkan data diri anda\n");
+fflush(stdin);
+printf("Nama\t: ");
+fgets(nama,sizeof(nama),stdin);
+fflush(stdin);
+printf("Nim\t: ");
+scanf("%d",&nim);
+fflush(stdin);
+printf("Umur\t: ");
+scanf("%d",&umur);
+fflush(stdin);
+printf("Kelas\t: ");
+fgets(kelas,sizeof(kelas),stdin);
+fflush(stdin);
+printf("Alamat Jalan\t: ");
+fgets(alamat,sizeof(alamat),stdin);
+fflush(stdin);
+printf("No. Hp\t: ");
+scanf("%d",&nohp);
+fflush(stdin);
+printf("Tanggal Lahir : ");
+scanf("%d %s %d",&tanggal,&bulan,&tahun);
+printf("\n");
+printf("**********Terima Kasih Telah
+Mendaftar**********\n");
+printf("Nama : %s",nama);
+printf("Nim : %d\n",nim);
+printf("Umur : %d\n",umur);
+printf("Kelas : %s",kelas);
+printf("Alamat : %s",alamat);
+printf("No Hp : %d\n",nohp);
+printf("Tangga Lahir : %d %s %d",tanggal,bulan,tahun);
+}
