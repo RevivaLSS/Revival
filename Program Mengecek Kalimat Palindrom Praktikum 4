@@ -1,0 +1,27 @@
+#include <stdio.h>
+13
+#include <string.h>
+char masuk[200], balik[200];
+int check()
+{
+ strcpy(balik, masuk);
+ strrev(balik);
+}
+int main()
+{
+ puts("Nama \t: Revi Valen Sumendap");
+ puts("Nim \t: 2008561099");
+ puts("Kelas \t: E");
+ puts("\nProgram Untuk Melihat Apakah Kata Atau Kalimat
+Merupakan Palindrom Atau Bukan\n");
+ printf("\nMasukan Kata Atau Kaliamt Yang Akan Di Cek :\n");
+ gets(masuk);
+ check();
+ if (strcmp(masuk, balik) == 0)
+ printf("\nKata Atau kalimat Yang Dimasukkan Merupakan
+Palindrome.\n");
+ else
+ printf("\nKata Atau kalimat Yang Dimasukkan Bukan Merupakan
+Palindrome.\n");
+ return 0;
+}
