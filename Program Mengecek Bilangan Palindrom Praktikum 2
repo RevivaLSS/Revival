@@ -1,0 +1,38 @@
+#include <stdio.h>
+#include <stdlib.h>
+int main()
+{
+ int masukan,pembanding,op1,jadi,lagi;
+ puts("Nama \t: Revi Valen Sumendap");
+ puts("Nim \t: 2008561099");
+ puts("Kelas \t: E");
+ puts("\nProgram Melihat Apakah Bilangan Palindrom Atau
+Bukan");
+ printf("\nMasukan Angka Yang Akan Di Cek : ");
+ scanf("%d", &masukan);
+ pembanding = masukan;
+ while (masukan != 0) {
+ op1 = masukan % 10;
+ jadi = jadi * 10 + op1;
+ masukan /= 10;
+ }
+ if (pembanding == jadi ) {
+ printf("\nBilangan Termasuk Bilangan Palindrom \n");
+21
+ }
+ else{
+ printf("\nBilangan Bukanlah Bilangan Palindrom \n");
+ }
+getch();
+printf("\n\nApakah Mau Input Lagi? Ketik 1 Jika Iya Ketik 2
+Jika Tidak : ");
+scanf("%d",&lagi);
+if (lagi == 1) {
+ printf("\n");
+ system("cls");
+ main();
+}
+else{
+ return 0;
+}
+}
